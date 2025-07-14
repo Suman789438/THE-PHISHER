@@ -20,7 +20,9 @@ $$$$$$$$\ $$\   $$\ $$$$$$$$\      $$$$$$$\  $$\   $$\ $$$$$$\  $$$$$$\  $$\   $
    $$ |   $$ |  $$ |$$ |           $$ |      $$ |  $$ |  $$ |  $$\   $$ |$$ |  $$ |$$ |      $$ |  $$ |      
    $$ |   $$ |  $$ |$$$$$$$$\      $$ |      $$ |  $$ |$$$$$$\ \$$$$$$  |$$ |  $$ |$$$$$$$$\ $$ |  $$ |      
    \__|   \__|  \__|\________|     \__|      \__|  \__|\______| \______/ \__|  \__|\________|\__|  \__|      
-                                                                                                                       """ + Fore.YELLOW + "  👻 Tool: " + Fore.CYAN + "THE-PHISHER" + Fore.RED + " | HCO @the_silent_hacker_raj\n")
+                                            
+                                             
+                """ + Fore.YELLOW + "  👻 Tool: " + Fore.GREEN + "THE-PHISHER" + Fore.CYAN + " | @the_silent_hacker_raj\n")
 
 def menu():
     print(Fore.MAGENTA + Style.BRIGHT + """
