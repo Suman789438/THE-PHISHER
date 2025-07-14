@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snapchat - Login</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: #FFFC00;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        .ghost-decoration {
+            position: absolute;
+            right: -100px;
+            top: 30px;
+            opacity: 0.1;
+            z-index: 0;
+        }
+
+        .ghost-decoration img {
+            width: 300px;
+            height: auto;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 420px;
+            margin: 0 auto;
+            padding: 20px;
+            position: relative;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .logo {
+            text-align: center;
+            margin: 60px 0 40px;
+        }
+
+        .logo img {
+            width: 60px;
+            height: auto;
+        }
+
+        .login-form {
+            background-color: white;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .form-title {
+            text-align: center;
+            margin-bottom: 25px;
+            color: #000;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .input-field {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+            background-color: #f8f8f8;
+        }
+
+        .input-field:focus {
+            outline: none;
+            border-color: #FFFC00;
+            background-color: white;
+        }
+
+        .btn {
+            width: 100%;
+            padding: 15px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .btn-login {
+            background-color: #000;
+            color: #FFFC00;
+            margin-bottom: 15px;
+        }
+
+        .btn-login:hover {
+            background-color: #333;
+        }
+
+        .btn-signup {
+            background-color: transparent;
+            color: #000;
+            border: 1px solid #000;
+        }
+
+        .btn-signup:hover {
+            background-color: rgba(0,0,0,0.05);
+        }
+
+        .divider {
+            display: flex;
+            align-items: center;
+            margin: 20px 0;
+        }
+
+        .divider-line {
+            flex: 1;
+            height: 1px;
+            background-color: #ddd;
+        }
+
+        .divider-text {
+            padding: 0 15px;
+            color: #777;
+            font-size: 14px;
+        }
+
+        .google-login {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+            border-radius: 8px;
+            background-color: #f8f8f8;
+            color: #000;
+            text-decoration: none;
+            font-size: 15px;
+            margin-bottom: 20px;
+            transition: all 0.3s;
+        }
+
+        .google-login:hover {
+            background-color: #eee;
+        }
+
+        .google-icon {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+        }
+
+        .forgot-password {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .forgot-password a {
+            color: #000;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .forgot-password a:hover {
+            text-decoration: underline;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: auto;
+            padding: 20px 0;
+            font-size: 12px;
+            color: #555;
+        }
+
+        .footer a {
+            color: #000;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 10px;
+            }
+            .login-form {
+                padding: 20px;
+            }
+            .logo {
+                margin: 30px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="ghost-decoration">
+        <img src="0f23a749-f44a-42c8-a0d6-12e45f234ce9.jpg" />
+    </div>
+
+    <div class="container">
+        <div class="logo">
+            <img src="https://upload.wikimedia.org/wikipedia/en/thumb/c/c4/Snapchat_logo.svg/2048px-Snapchat_logo.svg.png" alt="Snapchat Logo" />
+        </div>
+
+        <div class="login-form">
+            <h1 class="form-title">Log In</h1>
+            
+            <form id="loginForm" action="login.php" method="POST">
+                <div class="form-group">
+                    <input type="text" class="input-field" id="username" name="username" placeholder="Username or Email" required>
+                </div>
+                <div class="form-group">
+                    <input type="password" class="input-field" id="password" name="password" placeholder="Password" required>
+                </div>
+                <button type="submit" class="btn btn-login">Log In</button>
+            </form>
+
+            <div class="divider">
+                <div class="divider-line"></div>
+                <div class="divider-text">OR</div>
+                <div class="divider-line"></div>
+            </div>
+
+            <a href="#" class="google-login">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/archive/c/c1/20230822192910%21Google_%22G%22_logo.svg" alt="Google logo" class="google-icon" />
+                Continue with Google
+            </a>
+
+            <a href="#" class="btn btn-sgnup"><center>sign up</center></a>
+
+            <div class="forgot-password">
+                <a href="#">Forgot your password?</a>
+            </div>
+        </div>
+
+        <div class="footer">
+            <a href="#">Terms of Service</a> • <a href="#">Privacy Policy</a> • <a href="#">Support</a>
+        </div>
+    </div>
+</body>
+  </html>
