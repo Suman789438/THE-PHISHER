@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TikTok Login</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Arial, sans-serif;
+        }
+        
+        body {
+            background-color: #000;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        
+        .header {
+            display: flex;
+            justify-content: center;
+            padding: 20px 0;
+        }
+
+        .logo {
+            font-size: 32px;
+            font-weight: bold;
+            color: #fe2c55;
+            text-transform: uppercase;
+        }
+
+        
+        
+        .login-container {
+            max-width: 400px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        .login-box {
+            background-color: #121212;
+            border-radius: 8px;
+            padding: 30px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
+        
+        .login-title {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .input-group {
+            margin-bottom: 20px;
+            position: relative;
+        }
+        
+        .input-group input {
+            width: 100%;
+            padding: 12px 15px;
+            background-color: #1e1e1e;
+            border: 1px solid #393939;
+            border-radius: 4px;
+            color: #fff;
+            font-size: 16px;
+            outline: none;
+        }
+        
+        .input-group input:focus {
+            border-color: #fe2c55;
+        }
+        
+        .forgot-password {
+            display: block;
+            text-align: right;
+            font-size: 14px;
+            color: #808080;
+            margin-bottom: 20px;
+            text-decoration: none;
+        }
+        
+        .login-button {
+            width: 100%;
+            padding: 12px;
+            background-color: #fe2c55;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        
+        .login-button:hover {
+            background-color: #d12348;
+        }
+        
+        .divider {
+            display: flex;
+            align-items: center;
+            margin: 20px 0;
+        }
+        
+        .divider-line {
+            flex-grow: 1;
+            height: 1px;
+            background-color: #393939;
+        }
+        
+        .divider-text {
+            padding: 0 15px;
+            color: #808080;
+            font-size: 14px;
+        }
+        
+        .social-login {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        
+        .social-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 10px;
+            border-radius: 4px;
+            color: #fff;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        
+        .google-button {
+            background-color: #4285F4;
+        }
+        
+        .google-button:hover {
+            background-color: #357AE8;
+        }
+        
+        .facebook-button {
+            background-color: #1877F2;
+        }
+        
+        .facebook-button:hover {
+            background-color: #166FE5;
+        }
+        
+        .demo-warning {
+            text-align: center;
+            margin-top: 30px;
+            padding: 15px;
+            background-color: #333;
+            border-radius: 8px;
+            font-size: 14px;
+            color: #ff6b6b;
+            border: 1px solid #ff6b6b;
+        }
+        
+        .footer {
+            margin-top: auto;
+            padding: 20px;
+            text-align: center;
+            color: #808080;
+            font-size: 14px;
+        }
+        
+        .signup-link {
+            color: #fe2c55;
+            text-decoration: none;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">TikTok</div>
+       
+    </div>
+    
+    <div class="login-container">
+        <div class="login-box">
+            <h1 class="login-title">Log in</h1>
+            
+            <form>
+                <div class="input-group">
+                    <input type="text" placeholder="Phone, email, or username">
+                </div>
+                
+                <div class="input-group">
+                    <input type="password" placeholder="Password">
+                </div>
+                
+                <a href="#" class="forgot-password">Forgot password?</a>
+                
+                <button type="button" class="login-button">Log in</button>
+                
+                <div class="divider">
+                    <div class="divider-line"></div>
+                    <div class="divider-text">or</div>
+                    <div class="divider-line"></div>
+                </div>
+                
+                <div class="social-login">
+                    <button type="button" class="social-button google-button">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/archive/c/c1/20230822192910%21Google_%22G%22_logo.svg" alt="Google logo" style="width: 20px; height: 20px;">
+                        Continue with Google
+                    </button>
+                    <button type="button" class="social-button facebook-button">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6c/Facebook_Logo_2023.png" alt="Facebook logo" style="width: 20px; height: 20px;">
+                        Continue with Facebook
+                    </button>
+                </div>
+            </form>
+
+        </div>
+    </div>
+    
+    <div class="footer">
+        Don't have an account? <a href="#" class="signup-link">Sign up</a>
+    </div>
+    
+    <script>
+        document.querySelector('.login-button').addEventListener('click', function(e) {
+            e.preventDefault();
+            alert('This is a demo page. No actual login functionality exists.');
+        });
+        
+        document.querySelectorAll('.social-button').forEach(button => {
+            button.addEventListener('click', function(e) {
+                e.preventDefault();
+                alert('Social login is simulated in this demo.');
+            });
+        });
+    </script>
+</body>
+</html>
